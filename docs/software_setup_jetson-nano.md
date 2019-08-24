@@ -11,6 +11,7 @@ You'll need to flash an operating system ([Ubuntu Desktop 18.04](http://releases
 
 
 ## Install AC9260 Driver
+> Refer to [this post](https://devtalk.nvidia.com/default/topic/1050449/jetson-nano/intel-9260-wifi-on-jetson-nano-jetbot/post/5364792/#5364792)
 ```console
 # backported drivers
 cd ~
