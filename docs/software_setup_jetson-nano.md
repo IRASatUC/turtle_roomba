@@ -39,3 +39,14 @@ git clone https://github.com/JetsonHacksNano/installSwapfile.git
 cd installSwapfile
 ./installSwapfile
 ```
+
+## [Librealsense](https://www.jetsonhacks.com/2019/05/16/jetson-nano-realsense-depth-camera/)
+**Note: **Thie will take about a hour, so be patient.
+```console
+cd ~
+git clone https://github.com/jetsonhacksnano/installLibrealsense.git
+cd installLibrealsense
+./installLibrealsense.sh
+./patchUbuntu.sh
+```
+> Enter your password according to the prompt in the middle of the process.
