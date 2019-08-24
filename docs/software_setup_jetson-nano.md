@@ -10,3 +10,25 @@ You'll need to flash an operating system ([Ubuntu Desktop 18.04](http://releases
 4. The first time your Jetson-Nano powered on will require you to set up your linux account etc.. Follow the prompt to finish the job. Jetson-Nano will reboot automatically after everything was done. 
 
 
+## Install AC9260 Driver
+```console
+# backported drivers
+cd ~
+git clone https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
+
+cd backport-iwlwifi
+git checkout release/core47
+make clean
+make defconfig-iwlwifi-public
+make -j4
+sudo make install
+
+# firmwares
+cd ~/projects/
+git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+cd linux-firmware
+sudo cp -av ./iwlwifi-9260* /lib/firmware/
+
+sudo reboot
+```
+
