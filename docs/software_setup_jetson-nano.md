@@ -24,7 +24,7 @@ make -j4
 sudo make install
 
 # firmwares
-cd ~/projects/
+cd ~
 git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 cd linux-firmware
 sudo cp -av ./iwlwifi-9260* /lib/firmware/
