@@ -10,8 +10,7 @@ You'll need to flash an operating system ([Ubuntu Desktop 18.04](http://releases
 4. The first time your Jetson-Nano powered on will require you to set up your linux account etc.. Follow the prompt to finish the job. Jetson-Nano will reboot automatically after everything was done. 
 
 
-## Install AC9260 Driver
-> Refer to [this post](https://devtalk.nvidia.com/default/topic/1050449/jetson-nano/intel-9260-wifi-on-jetson-nano-jetbot/post/5364792/#5364792)
+## [Install AC9260 Driver](https://devtalk.nvidia.com/default/topic/1050449/jetson-nano/intel-9260-wifi-on-jetson-nano-jetbot/post/5364792/#5364792))
 ```console
 # backported drivers
 cd ~
@@ -33,3 +32,10 @@ sudo cp -av ./iwlwifi-9260* /lib/firmware/
 sudo reboot
 ```
 
+## [Use More Memory](https://www.jetsonhacks.com/2019/04/14/jetson-nano-use-more-memory/)
+```console
+cd ~
+git clone https://github.com/JetsonHacksNano/installSwapfile.git
+cd installSwapfile
+./installSwapfile
+```
