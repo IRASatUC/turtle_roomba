@@ -70,3 +70,22 @@ source ~/.bashrc
 # install essential software
 sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools
 ```
+
+## Create a ROS Workspace
+```console
+cd ~
+mkdir -p ros_ws/src
+cd ros_ws
+catkin init
+
+# setup workspcae environment
+echo "source $HOME/ros_ws/devel/setup.bash" >> ~/.bashrc
+```
+
+## [Install RealSenseRos](https://github.com/JetsonHacksNano/installRealSenseROS)
+```console 
+cd ~
+git clone https://github.com/JetsonHacksNano/installRealSenseROS.git
+cd installRealSenseROS
+./installRealSenseROS.sh ros_ws
+```
