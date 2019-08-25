@@ -89,3 +89,26 @@ git clone https://github.com/JetsonHacksNano/installRealSenseROS.git
 cd installRealSenseROS
 ./installRealSenseROS.sh ros_ws
 ```
+
+## Build ROS Packages for iRobot Create 2
+```console
+cd ~/ros_ws/src
+
+# download packages
+git clone https://github.com/AutonomyLab/create_autonomy.git
+cd create_autonomy
+git clone https://github.com/AutonomyLab/libcreate.git
+
+# build libcreate (a C++ library for interfacing with iRobot's Create 1 and 2 as well as most models of Roomba)
+cd ~/ros_ws
+catkin build libcreate
+
+# build create_autonomy
+rosdep update  
+rosdep install --from-paths src -i
+catkin build create_autonomy
+
+# USB permission
+sudo usermod -a -G dialout $USER
+rsudo eboot
+```
