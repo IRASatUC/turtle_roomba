@@ -112,3 +112,9 @@ catkin build create_autonomy
 sudo usermod -a -G dialout $USER
 rsudo eboot
 ```
+
+## [Install rtabmap_ros](http://wiki.ros.org/rtabmap_ros)
+```console
+sudo apt update
+sudo apt install ros-melodic-rtabmap-ros
+```
